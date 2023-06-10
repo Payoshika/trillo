@@ -1,0 +1,57 @@
+
+.logo{
+    height: 3.25rem;
+    margin-left: 3rem;
+}
+
+.search{
+    background-color: orangered;
+    flex:0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &__input{
+        font-family: inherit;
+        font-size: inherit;
+        background-color: var(--color-light);
+        border:none;
+        color: inherit;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 100%;
+        margin-right: -3rem;
+    }
+    &__button{
+        border: none;
+        background-color:  var(--color-light);
+    }
+
+    &__icon{
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+.user-nav{
+    background-color: greenyellow;
+    display: flex;
+    align-items: center;
+    &__icon{
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    &__notification{
+
+    }
+
+    &__user{
+
+    }
+
+    &__user-photo{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}

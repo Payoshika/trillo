@@ -1,0 +1,51 @@
+:root{
+    --color-primary: #f9ed69;
+    --color-secondary: #f08a5d;
+    --color-tertiary: #b83b5e;
+    --color-dark: #2d4059;
+    --color-light: #f4f4f4;
+    --color-white: #fff;
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0,0.3);
+    --shadow-light: 0 2rem 5rem rgba(0,0,0,0.06);
+    --line: 1px solid #777;
+    --radius: 3px;
+    --radius-big: 5px;
+    --radius-round: 50%;
+    --transition: all 0.2s ease-in-out;
+    --transition-slow: all 0.4s ease-in-out;
+    --transition-fast: all 0.1s ease-in-out;
+    --transition-cubic: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+    --transition-cubic-slow: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    --transition-cubic-fast: all 0.2s cubic-bezier(0.86, 0, 0.07, 1);
+    --transition-bounce: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-bounce-slow: all 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-bounce-fast: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-elastic: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-elastic-slow: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-elastic-fast: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{ 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-dark);
+    padding: 3rem;
+    background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
