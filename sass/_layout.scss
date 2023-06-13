@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .content{
@@ -32,6 +33,7 @@
 }
 
 .detail{
+    font-size: 1.4rem;
     display: flex;
     height: 10rem;
     padding: 4.5rem;
@@ -48,8 +50,11 @@
 }
 
 .user-reviews{
-    background-color: orange;
     flex: 0 0 40%;
     box-shadow: var(--shadow-light);
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
 }
+
