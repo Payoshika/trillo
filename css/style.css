@@ -22,7 +22,8 @@
   --transition-bounce-fast: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   --transition-elastic: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   --transition-elastic-slow: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  --transition-elastic-fast: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+  --transition-elastic-fast: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --line: 1px var(--color-dark) solid; }
 
 * {
   margin: 0;
@@ -173,11 +174,30 @@ body {
     display: flex; }
   .overview__location {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    margin-right: 2rem; }
   .overview__icon-star, .overview__icon-location {
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--color-primary); }
+  .overview__rating {
+    background-color: var(--color-primary);
+    align-self: stretch;
+    display: flex;
+    padding: 0 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .overview__rating:hover {
+      cursor: pointer;
+      background-color: green; }
+  .overview__rating-average {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: .5rem; }
+  .overview__rating-count {
+    font-size: 1.0rem;
+    font-weight: 400; }
 
 .btn-inline {
   border: none;
@@ -190,12 +210,56 @@ body {
   .btn-inline:hover {
     color: var(--color-grey-dark-1); }
 
+.paragraph:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-top: var(--line);
+  border-bottom: var(--line); }
+  .list__item {
+    flex: 0 0 50%;
+    display: flex;
+    margin-bottom: .7rem;
+    align-items: center; }
+  .list__item::before {
+    content: "";
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--color-primary);
+    --webkit-mask: url(../img/cheveron-right.svg) no-repeat center;
+    mask: url(../img/cheveron-right.svg) no-repeat center;
+    margin-right: 1rem;
+    mask-size: cover; }
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-2);
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .recommend__photo {
+    box-sizing: content-box;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100px;
+    border: 2px solid white; }
+    .recommend__photo:not(:last-child) {
+      margin-right: -1rem; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
   background-color: var(--color-light);
-  box-shadow: var(--shadow-dark);
-  min-height: 50rem; }
+  box-shadow: var(--shadow-dark); }
 
 .header {
   height: 7rem;
@@ -217,5 +281,23 @@ body {
 
 .hotel-view {
   background-color: #fff;
-  flex: 1;
-  height: 80rem; }
+  flex: 1; }
+
+.detail {
+  display: flex;
+  height: 10rem;
+  padding: 4.5rem;
+  height: max-content;
+  justify-content: center; }
+
+.description {
+  margin-right: 3rem;
+  background-color: white;
+  flex: 0 0 60%;
+  box-shadow: var(--shadow-light);
+  padding: 2rem; }
+
+.user-reviews {
+  background-color: orange;
+  flex: 0 0 40%;
+  box-shadow: var(--shadow-light); }

@@ -22,7 +22,8 @@
     --transition-bounce-fast: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     --transition-elastic: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     --transition-elastic-slow: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    --transition-elastic-fast: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);}
+    --transition-elastic-fast: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --line : 1px var(--color-dark) solid}
 
 *{
     margin: 0;

@@ -152,7 +152,6 @@
     }
     &__photo{
         width:100%;
-
     }
 }
 
@@ -179,6 +178,7 @@
     &__location{
         display: flex;
         align-items: center;
+        margin-right: 2rem;
     }
 
     &__icon-star, &__icon-location{
@@ -188,15 +188,28 @@
     }
 
     &__rating{
-
+        background-color: var(--color-primary);
+        align-self: stretch;
+        display: flex;
+        padding: 0 2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            cursor: pointer;
+            background-color: green;
+        }
     }
 
     &__rating-average{
-
+        font-size: 2rem;
+        font-weight: 300;
+        margin-bottom: .5rem;
     }
 
     &__rating-count{
-
+        font-size: 1.0rem;
+        font-weight: 400;
     }   
 }
 
@@ -211,4 +224,70 @@
     &:hover{
         color: var(--color-grey-dark-1);
     }
+}
+
+.paragraph:not(:last-child){
+    margin-bottom: 2rem;
+}
+
+.list{
+    list-style: none;
+    margin: 3rem 0;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: var(--line);
+    border-bottom: var(--line);
+
+    &__item{
+        flex:0 0 50%;
+        display: flex;
+        margin-bottom: .7rem;
+        align-items: center;
+    }
+
+    &__item::before{
+        content: "";
+        // background-image: url(../img/cheveron-right.svg);
+        // background-size: cover;
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+
+        background-color: var(--color-primary);
+        --webkit-mask: url(../img/cheveron-right.svg) no-repeat center;
+        mask: url(../img/cheveron-right.svg) no-repeat center;
+        margin-right: 1rem;
+        mask-size: cover;
+    }
+}
+
+.recommend{
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-2);
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__count{
+    }
+
+    &__friends{
+
+    }
+    
+    &__photo{
+        box-sizing: content-box;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100px;
+        border: 2px solid white;
+        &:not(:last-child){
+            margin-right: -1rem;
+        }
+    }
+
+
 }
